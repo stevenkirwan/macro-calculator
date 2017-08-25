@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <section class="calculator">
+
+            <input type="hidden" id="cals">
+            
+            <!-- Gender -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="calculator__radio-group">
+                        <input type="radio" id="male" class="genderCheckbox" name="gender" value="male" checked/>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" class="genderCheckbox" name="gender" value="female" />
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+             <!--  /Gender -->
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="weight">Weight</label>
+                    <input type="text" name="weight" id="weight">
+                </div>
+                <div class="col-6">
+                    <label for="height">Height</label>
+                    <input type="text" name="height" id="height">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="age">Age</label>
+                    <input type="text" name="age" id="age">
+                </div>
+                <div class="col-6">
+                    <label for="activity-level">Activity Level</label>
+                    <select name="activity-level" id="activity-level">
+                        <option value="sedentary">Sedentary</option>
+                        <option value="lightActivity">Light activity</option>
+                        <option value="moderateActivity">Moderate activity</option>
+                        <option value="veryActive">Very Active</option>
+                    </select>
+                </div>
+           </div>
+
+           <div class="row">
+                <div class="col-12">
+                    <!-- Goal -->
+                    <div class="calculator__radio-group">
+                        <input id="maintain" type="radio" name="goal" value="maintain" class="goalCheckbox" checked>
+                        <label for="maintain">Maintain</label>
+                        <input id="lose" type="radio" name="goal" value="lose" class="goalCheckbox">
+                        <label for="lose">Lose</label>
+                        <input id="gain" type="radio" name="goal" value="gain" class="goalCheckbox">
+                        <label for="gain">Gain</label>
+                    </div>
+                    <!-- /Goal -->
+                </div>
+           </div>
+
+
+            <div class="row">
+                <div class="col-12">
+                    <button id="getResult">Get results</button>
+                </div>
+            </div>
+
+            <div class="row" id="result__wrapper">
+                <div class="col-12">
+                    <div id="result"></div>
+                </div>
+            </div>
+            
+            <div id="macro__btn" class="row">
+                <div class="col-12">
+                    <button id="getMacros">Get results</button>
+                </div>
+            </div>
+
+            <div id="marcos" class="row">
+                <div class="col-12">
+                    <div id="protein"></div>
+                    <div id="fat"></div>
+                    <div id="carbs"></div>
+                </div>
+            </div>
+
+        </section>
+        <script src="app.js"></script>
+    </body>
+</html>

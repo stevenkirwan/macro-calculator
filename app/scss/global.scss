@@ -1,0 +1,118 @@
+@import 'utilities/reset';
+
+@import 'base/typography';
+
+@import 'layout/grid';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+    background: #f0f0f0;
+    font-family: $brand-body-font;
+}
+
+label{
+    display: block;
+    font-weight:bold;
+}
+
+input, select{
+    appearance:none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    border:1px solid #000000;
+    width:100%;
+  display:block;
+  height:100%;
+  padding: 10px;
+  background:none;
+  background-image:none;
+  border-radius:0;
+  transition:border-color .25s ease, box-shadow .25s ease;
+}
+
+button{
+      border:0;
+  outline:none;
+  border-radius:0;
+  padding:15px 0;
+    width:100%;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+background: #2980b9;
+  transition:all.5s ease;
+  -webkit-appearance: none;
+ cursor:pointer;
+ color:#ffffff;
+}
+
+#macro__btn, #marcos, #result__wrapper{
+    display:none;
+}
+
+.calculator{
+    background: #ffffff;
+    margin:40px auto;
+    padding:40px;
+    width:750px;
+    
+}
+
+.calculator__radio-group input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.calculator__radio-group label {
+  float: left;
+}
+.calculator__radio-group{
+    display:flex;
+}
+
+.calculator__radio-group label {
+//   display: inline-block;
+  background-color: #ecf0f1;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: none;
+  width:50%;
+    padding: 15px 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:    all 0.1s ease-in-out;
+  -ms-transition:     all 0.1s ease-in-out;
+  -o-transition:      all 0.1s ease-in-out;
+  transition:         all 0.1s ease-in-out;
+}
+
+.calculator__radio-group label:hover {
+	cursor: pointer;
+}
+
+.calculator__radio-group input:checked + label {
+  background-color: #2980b9;
+  color:#ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.calculator__radio-group label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.calculator__radio-group label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
