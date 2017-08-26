@@ -116,3 +116,33 @@ background: #2980b9;
 .calculator__radio-group label:last-of-type {
   border-radius: 0 4px 4px 0;
 }
+
+.result{
+  background: rgba(232, 228, 228, 0.85);
+  float: left;
+  text-align: center;
+  width:100%;
+}
+
+.macros__results{
+  display:flex;
+  text-align: center;
+  .macros__item{
+    background-color: #2980b9;
+    color:#ffffff;
+    padding:20px;
+    margin:10px;
+    width:100%; 
+    &:first-child{
+      margin-left:0;
+    }
+    &:last-child{
+      margin-right:0;
+    }
+    span{
+      display: block;
+      margin-top: 20px;
+      font-size: 30px;
+    }
+  }
+}

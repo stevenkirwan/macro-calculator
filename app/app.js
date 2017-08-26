@@ -84,7 +84,7 @@ var macroController = (function(){
         },
 
         getProtein: function(weight){
-            var protein = Math.round((weight * 0.825));
+            var protein = Math.round((weight * 1));
             return protein;
         },
 
@@ -126,7 +126,8 @@ var UIController = (function(){
         OutputResult: 'result',
         InputMacros: 'getMacros',
         OutputProtein: 'protein',
-        OutputFat: 'fat'  
+        OutputFat: 'fat',
+        OutputCarbs: 'carbs'  
     };
 
     return{
@@ -165,7 +166,7 @@ var UIController = (function(){
             var result;
             
             result = document.getElementById(DOMstrings.OutputResult);
-            result.innerHTML = '<h1>' + goal + '</h1>';
+            result.innerHTML = '<h1> Calories: ' + goal + '</h1>';
 
         },
 
@@ -173,25 +174,23 @@ var UIController = (function(){
 
             var protein;
             protein = document.getElementById(DOMstrings.OutputProtein);
-            protein.innerHTML = '<h1>' + kg + '</h1>';
+            protein.innerHTML += '<h3>Protein<span>' + kg + 'g</span></h3>';
 
         },
 
         addFat: function(totalFat){
 
             var fat;
-
             fat = document.getElementById(DOMstrings.OutputFat);
-            fat.innerHTML += '<h1>' + totalFat + '</h1>';
+            fat.innerHTML += '<h3>Fat<span>' + totalFat + 'g</span></h3>';
             
         },
 
         addCarbs: function(totalCarbs){
 
             var carbs;
-
-            carbs = document.getElementById(DOMstrings.OutputFat);
-            carbs.innerHTML += '<h1>' + totalCarbs + '</h1>';
+            carbs = document.getElementById(DOMstrings.OutputCarbs);
+            carbs.innerHTML += '<h3>Carbs<span>' + totalCarbs + 'g</span></h3>';
             
         },
 

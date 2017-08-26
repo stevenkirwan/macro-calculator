@@ -150,3 +150,27 @@ button {
 
 .calculator__radio-group label:last-of-type {
   border-radius: 0 4px 4px 0; }
+
+.result {
+  background: rgba(232, 228, 228, 0.85);
+  float: left;
+  text-align: center;
+  width: 100%; }
+
+.macros__results {
+  display: flex;
+  text-align: center; }
+  .macros__results .macros__item {
+    background-color: #2980b9;
+    color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    width: 100%; }
+    .macros__results .macros__item:first-child {
+      margin-left: 0; }
+    .macros__results .macros__item:last-child {
+      margin-right: 0; }
+    .macros__results .macros__item span {
+      display: block;
+      margin-top: 20px;
+      font-size: 30px; }
