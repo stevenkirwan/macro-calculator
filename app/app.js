@@ -27,7 +27,23 @@
 
 var macroController = (function(){
 
+    var data = {
+        weight: 0,
+        height: 0,
+        age: 0,
+        activityLevel: ''
+    };
+
     return{
+
+        addUser: function(weight, height, age, activityLevel){
+            data['weight'] = weight;
+            data['height'] = height;
+            data['age'] = age;
+            data['activityLevel'] = activityLevel;
+            console.log(data);
+        },
+
         // Get REE
         getREE: function(weight ,height, age, gender){
             if(gender == 'male'){
@@ -106,6 +122,10 @@ var macroController = (function(){
         getTotalFat: function(fat){
             var totalFat = Math.floor(fat * 9);
             return totalFat;
+        }, 
+
+        testing: function(){
+            console.log(data);
         }
     }
     
@@ -113,7 +133,11 @@ var macroController = (function(){
 
 // UI controller
 var UIController = (function(){
-    
+
+    var data = {
+        age: 0
+    };
+
     // Declare DOM strings
     var DOMstrings = {
         inputWeight: 'weight',
@@ -131,6 +155,7 @@ var UIController = (function(){
     };
 
     return{
+
         // Get User input
         getInput: function(){
 
@@ -220,6 +245,7 @@ var appController = (function(UICtrl, macroCtrl){
 
         document.getElementById(DOM.InputBtn).addEventListener('click', function(){
             ctrlGetREE();
+            addUserInfo();
             UICtrl.showElement('result__wrapper');
             UICtrl.showElement('macro__btn');
         });
@@ -235,6 +261,13 @@ var appController = (function(UICtrl, macroCtrl){
             }
         });
     };
+
+    var addUserInfo = function(){
+        var info;
+        
+        input = UICtrl.getInput();
+        info = macroCtrl.addUser(input.weight, input.height, input.age, input.activityLevel);
+    }
 
     var ctrlGetREE = function(){
         
